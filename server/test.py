@@ -38,7 +38,7 @@ def process():
             max_B, min_B = np.max(B), np.min(B)
             B_adjusted = np.where(B > 0, B + (max_B - B) * -.7, B - (B - min_B) * -.7)
             max_A, min_A = np.max(A), np.min(A)
-            A_adjusted = np.where(A > 0, A + (max_A - A) * .9, A - (A - min_A) *.9)
+            A_adjusted = np.where(A > 0, A + (max_A - A) * .8, A - (A - min_A) *.8)
         elif deficiency == 'tritanopia':
             max_L, min_L = np.max(L), np.min(L)
             L_adjusted = np.where(L > 0, L + (max_L - L) * 0.2, L - (L - min_L) * 0.2)

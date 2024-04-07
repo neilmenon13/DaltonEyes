@@ -4,6 +4,9 @@ import React, { ChangeEvent, useState } from 'react'
 import { files } from './components/ImageLoader'
 import { Box, Button, Divider, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material'
 import { useRouter } from 'next/navigation';
+import { Roboto_Condensed } from 'next/font/google';
+
+const font = Roboto_Condensed({ subsets: ['latin'] })
 
 function Page({ params }: { params: any }) {
     console.log(files)
@@ -101,7 +104,7 @@ function Page({ params }: { params: any }) {
     return (
         <div className='flex flex-row w-screen h-screen'>
             <Box className='flex h-screen w-5/12 flex-col pl-10 pt-11 border-r-2'>
-                <h1 className="mb-14 text-6xl">DaltonEyes</h1>
+                <h1 className={`${font.className} mb-14 text-6xl`}>DaltonEyes</h1>
                 <div className='flex text-center w-fit'>
                     <input id='image_upload' type="file" className='' style={{ display: 'none', width: '0px', height: '0px'}} onChange={handleFileChange} />
                         <label htmlFor='image_upload' className='w-[160px] tonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-sghohy-MuiButtonBase-root-MuiButton-root mb-1'>
