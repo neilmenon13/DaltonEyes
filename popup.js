@@ -9,7 +9,7 @@ document.getElementById('captureScreenshot').addEventListener('click', function(
   
   function takeScreenshot() {
     chrome.scripting.captureVisibleTab({ format: 'png' }, function(screenshotUrl) {
-      fetch('YOURBACKEND SERVER', {
+      fetch('YOUR BACKEND SERVER', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
